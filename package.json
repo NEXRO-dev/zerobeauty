@@ -1,0 +1,21 @@
+{
+  "name": "zero-beauty",
+  "version": "1.0.0",
+  "description": "ZERO BEAUTY - 美容の悩みを解決するサイト",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000",
+    "dev": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "beauty",
+    "skincare",
+    "cosmetics",
+    "japan"
+  ],
+  "author": "ZERO BEAUTY",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

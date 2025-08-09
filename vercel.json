@@ -1,22 +1,16 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/privacy",
+      "destination": "/privacy.html"
     },
     {
-      "src": "/privacy",
-      "dest": "/privacy.html"
+      "source": "/terms",
+      "destination": "/terms.html"
     },
     {
-      "src": "/terms",
-      "dest": "/terms.html"
-    },
-    {
-      "src": "/company",
-      "dest": "/company.html"
+      "source": "/company",
+      "destination": "/company.html"
     }
   ],
   "headers": [

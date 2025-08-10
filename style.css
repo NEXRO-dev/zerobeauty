@@ -929,6 +929,19 @@ body {
     min-height: auto !important;
 }
 
+.team-section .section-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: center;
+    margin: 0 0 60px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
 .team-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -2358,6 +2371,12 @@ body {
         margin: 60px auto;
         border-radius: 25px;
     }
+
+    .team-section .section-title {
+        font-size: 44px;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
     
     .team-title h2 {
         font-size: 30px;
@@ -2912,6 +2931,12 @@ body {
         padding: 40px 20px;
         margin: 40px auto;
         border-radius: 20px;
+    }
+
+    .team-section .section-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        letter-spacing: 1.5px;
     }
     
     .team-title {
@@ -3598,6 +3623,13 @@ body {
         padding: 30px 15px;
         margin: 20px auto;
         border-radius: 15px;
+    }
+
+    .team-section .section-title {
+        font-size: 26px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        padding: 0 10px;
     }
     
     .team-title {

@@ -824,6 +824,71 @@ body {
     color: #333333;
 }
 
+/* AR機能 */
+.ar-feature {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.ar-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+    text-align: center;
+    user-select: none;
+}
+
+.ar-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.ar-button:active {
+    transform: translateY(0);
+}
+
+.ar-qr {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.ar-qr img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+}
+
+/* デバイス別表示制御 */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+}
+
 .product-info {
     padding: 30px;
     display: flex;
@@ -2912,6 +2977,28 @@ body {
     .problem-list li,
     .feature-list li {
         font-size: 12px;
+    }
+
+    /* AR機能 レスポンシブ */
+    .ar-feature {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .ar-button {
+        padding: 6px 12px;
+        font-size: 11px;
+        border-radius: 15px;
+    }
+
+    .ar-qr {
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .ar-qr img {
+        width: 50px;
+        height: 50px;
     }
     
     .products-philosophy {

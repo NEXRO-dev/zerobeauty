@@ -147,3 +147,39 @@ function toggleAnswer(questionElement) {
         toggle.textContent = '−';
     }
 }
+
+// AR機能
+document.addEventListener('DOMContentLoaded', function() {
+    // ARボタンのクリックイベント
+    const arButtons = document.querySelectorAll('.ar-button');
+    
+    arButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 商品名を取得してARリンクを決定
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('.product-name').textContent;
+            
+            let arUrl;
+            if (productName.includes('ZERO RESET')) {
+                arUrl = 'https://example.com/ar/zero-reset';
+            } else if (productName.includes('デリケートゾーンシート')) {
+                arUrl = 'https://example.com/ar/delicate-sheet';
+            } else if (productName.includes('デリケートゾーン専用保湿クリーム')) {
+                arUrl = 'https://example.com/ar/delicate-cream';
+            } else if (productName.includes('POKARUN')) {
+                arUrl = 'https://example.com/ar/pokarun';
+            } else {
+                arUrl = 'https://example.com/ar/default';
+            }
+            
+            // ARページを開く
+            window.open(arUrl, '_blank');
+            
+            // クリック効果
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+});

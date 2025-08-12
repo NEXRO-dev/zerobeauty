@@ -1118,6 +1118,7 @@ body {
     color: #666666;
     margin-bottom: 15px;
     font-style: italic;
+    text-align: left;
 }
 
 .member-description {

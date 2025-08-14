@@ -183,3 +183,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// スクロールアニメーション
+function observeElements() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+    });
+
+    // 商品カードにアニメーション適用
+    document.querySelectorAll('.product-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px) scale(0.95)';
+        card.style.transition = `all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15}s`;
+        observer.observe(card);
+    });
+
+    // セクションタイトルにもアニメーション
+    document.querySelectorAll('.products-title').forEach((title, index) => {
+        title.style.opacity = '0';
+        title.style.transform = 'translateY(20px)';
+        title.style.transition = 'all 0.6s ease-out';
+        observer.observe(title);
+    });
+
+    // メンバーカードにアニメーション適用
+    document.querySelectorAll('.member-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px) scale(0.98)';
+        card.style.transition = `all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.12}s`;
+        observer.observe(card);
+    });
+
+    // チームタイトルにもアニメーション
+    document.querySelectorAll('.team-title').forEach((title, index) => {
+        title.style.opacity = '0';
+        title.style.transform = 'translateY(20px)';
+        title.style.transition = 'all 0.6s ease-out';
+        observer.observe(title);
+    });
+}
+
+// ページ読み込み時にアニメーション初期化
+document.addEventListener('DOMContentLoaded', observeElements);

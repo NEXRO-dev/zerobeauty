@@ -2318,6 +2318,65 @@ body {
     transform: translateY(-2px);
 }
 
+/* 超大画面対応（1920px以上） */
+@media (min-width: 1920px) {
+    .home-image-zerobeauty {
+        max-width: 700px;
+        padding: 25px;
+        margin: 30px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 650px;
+        max-height: 350px;
+    }
+}
+
+/* 大画面対応（1200px-1919px） */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    .home-image-zerobeauty {
+        max-width: 520px !important;
+        padding: 20px !important;
+        margin: 25px auto !important;
+        width: 100% !important;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 480px !important;
+        max-height: 260px !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* 中大画面対応（1024px-1199px） */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .home-image-zerobeauty {
+        max-width: 480px;
+        padding: 15px;
+        margin: 25px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 450px;
+        max-height: 240px;
+    }
+}
+
+/* 中画面対応（900px-1023px） */
+@media (min-width: 900px) and (max-width: 1023px) {
+    .home-image-zerobeauty {
+        max-width: 450px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 420px;
+        max-height: 230px;
+    }
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 1200px) {
     .vertical-logo {
@@ -2392,25 +2451,39 @@ body {
     
 .home-image-zerobeauty {
     position: relative;
-    width: 40vw;
-    max-width: 400px;
-    min-width: 180px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 460px !important;
+    max-width: 460px !important;
+    height: 250px !important;
+    max-height: 250px !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
     background: none;
     box-shadow: none;
     border-radius: 0;
-    margin: 0 auto;
+    margin: 20px auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
 }
     
     .home-image-zerobeauty img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        display: block;
+        width: 460px !important;
+        height: 250px !important;
+        max-width: 460px !important;
+        max-height: 250px !important;
+        -webkit-object-fit: contain !important;
+        object-fit: contain !important;
+        display: block !important;
         margin: 0 auto;
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
     }
     
     .home-catchcopy h1,
@@ -2874,6 +2947,20 @@ body {
 
 }
 
+/* 小中画面対応（769px-899px） */
+@media (min-width: 769px) and (max-width: 899px) {
+    .home-image-zerobeauty {
+        max-width: 400px;
+        padding: 12px;
+        margin: 15px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 376px;
+        max-height: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         background: linear-gradient(135deg, #E8F4FD 0%, #F1F8FF 50%, #FAFCFF 100%);
@@ -2964,9 +3051,14 @@ body {
     }
     
     .home-image-zerobeauty {
-        width: 70vw;
-        max-width: 300px;
-        min-width: 120px;
+        max-width: 350px;
+        padding: 10px;
+        margin: 15px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 330px;
+        max-height: 180px;
     }
     
     .home-catchcopy h1,
@@ -3587,6 +3679,17 @@ body {
     
     .section p {
         font-size: 16px;
+    }
+    
+    .home-image-zerobeauty {
+        max-width: 300px;
+        padding: 8px;
+        margin: 10px auto;
+    }
+    
+    .home-image-zerobeauty img {
+        max-width: 284px;
+        max-height: 150px;
     }
     
     .footer {

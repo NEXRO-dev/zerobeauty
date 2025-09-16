@@ -3632,6 +3632,11 @@ body {
 @media (max-width: 480px) {
     body {
         background: linear-gradient(to right, #ADD8E6 0%, #ADD8E6 60%, #FFFFFF 100%);
+        margin: 0 auto !important;
+        padding: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        text-align: center !important;
     }
     
     .vertical-logo {
@@ -3682,14 +3687,26 @@ body {
     }
     
     .home-image-zerobeauty {
-        max-width: 300px;
-        padding: 8px;
-        margin: 10px auto;
+        max-width: 300px !important;
+        width: 300px !important;
+        padding: 8px !important;
+        margin: 10px auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: relative !important;
     }
     
     .home-image-zerobeauty img {
-        max-width: 284px;
-        max-height: 150px;
+        max-width: 284px !important;
+        max-height: 150px !important;
+        width: 284px !important;
+        height: 150px !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
     .footer {
@@ -3754,12 +3771,31 @@ body {
     /* HOME画面 */
     .home-section {
         padding: 40px 15px;
-        margin: 20px auto;
+        margin: 20px auto !important;
         border-radius: 15px;
+        width: calc(100% - 30px) !important;
+        max-width: calc(100% - 30px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: relative !important;
+        text-align: center !important;
     }
     
     .home-content {
         gap: 40px;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .section {
+        margin: 20px auto !important;
+        width: calc(100% - 30px) !important;
+        max-width: calc(100% - 30px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: relative !important;
+        text-align: center !important;
     }
     
     .home-images {

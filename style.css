@@ -1196,6 +1196,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .member-card:hover {
@@ -1276,6 +1279,10 @@ body {
     padding: 25px;
     position: relative;
     text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .member-name {
@@ -2708,8 +2715,16 @@ body {
     
 
     
+    .member-card {
+        min-height: 450px;
+    }
+    
     .member-info {
         padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
     .member-name {
@@ -2963,7 +2978,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background: linear-gradient(135deg, #E8F4FD 0%, #F1F8FF 50%, #FAFCFF 100%);
+        background: #F1F8FF;
     }
     
     .vertical-logo {
@@ -3072,6 +3087,12 @@ body {
     
     .home-introduction {
         padding: 40px 25px;
+        max-width: calc(100vw - 10px);
+        margin: 20px auto;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
     }
     
     .intro-question {
@@ -3094,7 +3115,9 @@ body {
     }
     
     .speech-bubble {
-        max-width: 250px;
+        max-width: calc(100vw - 160px);
+        width: 100%;
+        min-width: 200px;
         padding: 15px 20px;
     }
     
@@ -3113,6 +3136,16 @@ body {
     
     .intro-mission p {
         font-size: 16px;
+    }
+    
+    .home-additional-content {
+        max-width: calc(100vw - 10px);
+        margin: 40px auto;
+    }
+    
+    .home-news-section {
+        max-width: calc(100vw - 10px);
+        margin: 0 auto;
     }
     
     .view-more-btn {
@@ -3330,8 +3363,16 @@ body {
     
 
     
+    .member-card {
+        min-height: 400px;
+    }
+    
     .member-info {
         padding: 18px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
     .member-name {
@@ -3631,12 +3672,11 @@ body {
 
 @media (max-width: 480px) {
     body {
-        background: linear-gradient(to right, #ADD8E6 0%, #ADD8E6 60%, #FFFFFF 100%);
-        margin: 0 auto !important;
+        background: #F1F8FF;
+        margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
         overflow-x: hidden !important;
-        text-align: center !important;
     }
     
     .vertical-logo {
@@ -3687,26 +3727,14 @@ body {
     }
     
     .home-image-zerobeauty {
-        max-width: 300px !important;
-        width: 300px !important;
-        padding: 8px !important;
-        margin: 10px auto !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        position: relative !important;
+        max-width: 300px;
+        padding: 8px;
+        margin: 10px auto;
     }
     
     .home-image-zerobeauty img {
-        max-width: 284px !important;
-        max-height: 150px !important;
-        width: 284px !important;
-        height: 150px !important;
-        margin: 0 auto !important;
-        display: block !important;
+        max-width: 284px;
+        max-height: 150px;
     }
     
     .footer {
@@ -3771,31 +3799,12 @@ body {
     /* HOME画面 */
     .home-section {
         padding: 40px 15px;
-        margin: 20px auto !important;
+        margin: 20px auto;
         border-radius: 15px;
-        width: calc(100% - 30px) !important;
-        max-width: calc(100% - 30px) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        position: relative !important;
-        text-align: center !important;
     }
     
     .home-content {
         gap: 40px;
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 auto !important;
-    }
-    
-    .section {
-        margin: 20px auto !important;
-        width: calc(100% - 30px) !important;
-        max-width: calc(100% - 30px) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        position: relative !important;
-        text-align: center !important;
     }
     
     .home-images {
@@ -3839,7 +3848,13 @@ body {
     }
     
     .home-introduction {
-        padding: 30px 20px;
+        padding: 35px 25px;
+        max-width: calc(100vw - 10px);
+        margin: 20px auto;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
     }
     
     .intro-question {
@@ -3847,12 +3862,16 @@ body {
     }
     
     .intro-concerns {
-        padding: 20px 10px;
+        padding: 15px 30px;
+        max-width: 320px;
+        margin: 20px auto;
+        box-sizing: border-box;
     }
     
     .person-illustration {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
     }
     
     .person-illustration img {
@@ -3862,23 +3881,29 @@ body {
     }
     
     .speech-bubble {
-        max-width: 240px;
-        padding: 14px 18px;
-        line-height: 1.5;
+        max-width: 200px;
+        width: auto;
+        min-width: 140px;
+        padding: 8px 12px;
+        line-height: 1.4;
+        font-size: 12px;
     }
     
     .speech-bubble p {
-        font-size: 14px;
-        line-height: 1.6;
+        font-size: 12px;
+        line-height: 1.5;
         word-break: keep-all;
         overflow-wrap: break-word;
         white-space: pre-line;
+        margin: 0;
     }
     
     .speech-bubble-container {
-        gap: 12px;
-        margin: 22px 0;
+        gap: 8px;
+        margin: 15px 0;
         align-items: flex-start;
+        padding: 0;
+        justify-content: center;
     }
     
     .intro-empathy {
@@ -3887,6 +3912,17 @@ body {
     
     .intro-mission p {
         font-size: 15px;
+    }
+    
+    .home-additional-content {
+        max-width: calc(100vw - 10px);
+        margin: 40px auto;
+    }
+    
+    .home-news-section {
+        max-width: calc(100vw - 10px);
+        margin: 0 auto;
+        padding: 30px 25px;
     }
     
     .view-more-btn {
@@ -4093,8 +4129,16 @@ body {
     
 
     
+    .member-card {
+        min-height: 350px;
+    }
+    
     .member-info {
         padding: 15px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
     .member-name {
